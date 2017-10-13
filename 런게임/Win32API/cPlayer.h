@@ -1,7 +1,7 @@
 #pragma once
 #include "cImage.h"
 
-#define MAP1_Y (WINSIZEY - 110)
+#define MAP1_Y (WINSIZEY - 85)
 
 class cPlayer
 {
@@ -10,6 +10,7 @@ private:
 	float			m_fGravity;
 	bool			m_isJumpping;
 	bool			m_is2ndJump;
+	bool			m_isSlide;
 	float			m_fJumpPower;
 
 	int				m_nMapYPos;
