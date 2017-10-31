@@ -17,7 +17,8 @@ cPlayer::~cPlayer()
 void cPlayer::Setup()
 {
 	m_nMapYPos = MAP1_Y;
-	m_fJumpPower = -7.0f;
+	m_fJumpDefault = -10.0f;
+	m_fJumpPower = m_fJumpDefault;
 
 	SetLanding();
 }
@@ -27,7 +28,7 @@ void cPlayer::Update()
 	m_isSlide = false;
 	if (!m_isJumpping && !m_is2ndJump && g_pKeyManager->isOnceKeyDown(VK_SPACE))
 	{
-		m_fJumpPower = -7.0f;
+		m_fJumpPower = m_fJumpDefault;
 		m_isJumpping = true;
 	}
 
@@ -46,7 +47,7 @@ void cPlayer::Update()
 	}
 	if (!m_is2ndJump && m_isJumpping && g_pKeyManager->isOnceKeyDown(VK_SPACE))//2¥‹¡°«¡
 	{
-		m_fJumpPower = -7.0f;
+		m_fJumpPower = m_fJumpDefault;
 		m_isJumpping = false;
 		m_is2ndJump = true;
 	}

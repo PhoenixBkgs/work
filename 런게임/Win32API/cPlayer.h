@@ -12,6 +12,7 @@ private:
 	bool			m_is2ndJump;
 	bool			m_isSlide;
 	float			m_fJumpPower;
+	float			m_fJumpDefault;
 
 	int				m_nMapYPos;
 
